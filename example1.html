@@ -29,19 +29,19 @@
             font-weight: bold;
         }
 
-        nav a {
+        nav[role="navigation"] a {
             color: white;
             text-decoration: none;
             margin-left: 20px;
             font-weight: 500;
         }
 
-        nav a:hover {
+        nav[role="navigation"] a:hover {
             color: #f39c12;
             border-bottom: 2px solid #f39c12;
         }
 
-        .content {
+        main {
             max-width: 1000px;
             margin: 30px auto;
             padding: 20px;
@@ -109,7 +109,7 @@
     <header>
         <div class="nav-container">
             <div class="logo">CM Hamza Cars</div>
-            <nav>
+            <nav role="navigation" aria-label="Main navigation">
                 <a href="#home">Home</a>
                 <a href="#products">Products</a>
                 <a href="#contact">Contact</a>
@@ -117,52 +117,53 @@
         </div>
     </header>
 
-    <section class="content" id="home">
-        <h2>Welcome</h2>
-        <p>Hi, I'm CM Hamza and this is my student car business website.</p>
-        <p>I sell good quality used cars at fair prices.</p>
-    </section>
+    <main>
+        <section id="home" aria-labelledby="home-heading">
+            <h2 id="home-heading">Welcome</h2>
+            <p>Hi, I'm CM Hamza and this is my student car business website.</p>
+            <p>I sell good quality used cars at fair prices.</p>
+        </section>
 
-    <section class="content" id="products">
-        <h2>Products</h2>
-        <div class="main-img">
-            <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Main Car">
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in at ipsum nobis, officia aut veniam assumenda debitis error! Voluptatem, repellendus.</p>
+        <section id="products" aria-labelledby="products-heading">
+            <h2 id="products-heading">Products</h2>
+            <div class="main-img">
+                <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Main car display">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in at ipsum nobis, officia aut veniam assumenda debitis error! Voluptatem, repellendus.</p>
 
-        <div class="product-grid">
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in at ipsum nobis.</p>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Toyota Corolla 2015">
+                    <h3>Product 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in at ipsum nobis.</p>
+                </div>
+                <div class="product">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Honda Civic 2018">
+                    <h3>Product 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in at ipsum nobis.</p>
+                </div>
+                <div class="product">
+                    <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Ford Focus 2016">
+                    <h3>Product 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in at ipsum nobis.</p>
+                </div>
             </div>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in at ipsum nobis.</p>
-            </div>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Product 3">
-                <h3>Product 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in at ipsum nobis.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="content" id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-layout">
-            <div class="contact-info">
-                <p>1234 st.<br>Matinkylä, Espoo<br>12345-6789</p>
-                <p>Email: cmhamza@example.com</p>
-                <p>Phone: +000 (234) 234 2349</p>
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Us</h2>
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <p>1234 st.<br>Matinkylä, Espoo<br>12345-6789</p>
+                    <p>Email: cmhamza@example.com</p>
+                    <p>Phone: +000 (234) 234 2349</p>
+                </div>
+                <div class="map-box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Espoo_Matinkyl%C3%A4_map.png" alt="Map of Matinkylä, Espoo">
+                </div>
             </div>
-            <div class="map-box">
-                <!-- Simple map image of Matinkylä -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Espoo_Matinkyl%C3%A4_map.png" alt="Map of Espoo Matinkylä">
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <p>Student Project - CM Hamza</p>
